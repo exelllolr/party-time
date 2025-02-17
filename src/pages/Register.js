@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { registerUser } from '../api/auth';
 
 const Register = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [errorMessage, setErrorMessage] = useState('');
-  const history = useHistory();
+  const history = useNavigate();
 
   const onSubmit = async (data) => {
     try {
